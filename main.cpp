@@ -65,11 +65,5 @@ int main()
     // Reverse
     list.reverse();
 
-    // Sort Asc
-    list.sort(1);
-
-    // Sort Des
-    list.sort(-1);
-
     return 0;
 }
