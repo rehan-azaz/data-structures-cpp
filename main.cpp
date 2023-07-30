@@ -65,5 +65,8 @@ int main()
     // Reverse
     list.reverse();
 
+    // Display
+    list.display();
+
     return 0;
 }
