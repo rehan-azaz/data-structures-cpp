@@ -1,72 +1,40 @@
 #include <iostream>
-#include "Node.h"
-#include "LinkedList.h"
+#include "Queue.h"
 
 using namespace std;
 
 int main()
 {
-    // List
-    LinkedList list;
+    Queue queue;
 
-    // isEmpty
-    cout << "isEmpty: " << list.isEmpty() << endl;
+    // Enqueue
+    queue.enqueue(100);
+    queue.enqueue(99);
+    queue.enqueue(999);
+    queue.enqueue(0);
+    queue.enqueue(50);
+
+    // Display
+    queue.display();
+
+    // Dequeue
+    queue.dequeue();
+    queue.dequeue();
+
+    // Display
+    queue.display();
+
+    // Empty Check
+    cout << "Empty Check: " << queue.isEmpty() << endl;
 
     // Size
-    cout << "Size: " << list.getSize() << endl;
+    cout << "Size: " << queue.getSize() << endl;
 
-    // Append
-    list.append(10);
-    list.append(30);
-    list.append(20);
-    list.append(30);
-    list.append(40);
+    // Front
+    cout << "Front: " << queue.front() << endl;
 
-    // Prepend
-    list.prepend(9);
-
-    // Remove
-    list.remove(30);
-
-    // isEmpty
-    cout << "isEmpty: " << list.isEmpty() << endl;
-
-    // Size
-    cout << "Size: " << list.getSize() << endl;
-
-    // Search 10
-    cout << "Search 10: " << list.search(10) << endl;
-
-    // Search 50
-    cout << "Search 50: " << list.search(50) << endl;
-
-    // Display
-    list.display();
-
-    // Remove At Index
-    list.removeAt(4);
-
-    // Get At Index
-    cout << "At index 2: " << list.getAt(2) << endl;
-
-    // Display
-    list.display();
-
-    // insertAfter
-    Node *node = new Node(30);
-    list.insertAfter(node, 14);
-
-    Node *node2 = new Node(19);
-    list.insertAfter(node2, 25);
-
-    // Display
-    list.display();
-
-    // Reverse
-    list.reverse();
-
-    // Display
-    list.display();
+    // Rare
+    cout << "Rare: " << queue.rare() << endl;
 
     return 0;
 }
