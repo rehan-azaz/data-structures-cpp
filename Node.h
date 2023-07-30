@@ -1,3 +1,6 @@
+#ifndef NODE_H
+#define NODE_H
+
 class Node
 {
     int data;
@@ -10,15 +13,22 @@ public:
         this->next = nullptr;
     }
 
-    int getData() const {
+    ~Node() {}
+
+    int getData() const
+    {
         return this->data;
     }
 
-    Node* getNext() const {
+    Node *getNext() const
+    {
         return this->next;
-    }  
+    }
 
-    void setNext(Node* next) {
+    void setNext(Node *next)
+    {
         this->next = next;
     }
 };
+
+#endif
